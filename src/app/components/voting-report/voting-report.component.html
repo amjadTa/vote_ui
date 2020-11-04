@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="title row">
+        <h2 class="font-italic text-muted text-center">חיפוש מצביע (לפי תעודת זהות או נתוני קלפי)</h2>
+    </div>
+    <form [formGroup]="votingReportForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <input type="text" id="id" name="id" formControlName="id" autocomplete="off" class="form-control" placeholder="תעודת זהות">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="ballotBoxNumber" name="ballotBoxNumber" formControlName="ballotBoxNumber" autocomplete="off"
+                class="form-control" placeholder="מספר קלפי">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="serieal" name="serieal" formControlName="serieal" autocomplete="off"
+                class="form-control" placeholder="מספר סידורי בקלפי">
+        </div>
+        <br />
+        <div class="row">
+            <div class="form-group search col-md-2">
+                <button class="btn btn-info">חיפוש</button>
+            </div>
+            <div class="col-md-2" style="float: left; cursor: pointer;" (click)="clearSearch()">
+                <span>נקה שדות חיפוש</span>
+            </div>
+        </div>
+        
+    </form>
+<app-result [voterData] = "voterData" *ngIf="showTablesResult" (showResult)="showResult($event)"></app-result>
+<app-create-voter *ngIf="showAddVoter" (showVoter)="showVoter($event)"></app-create-voter>
+</div>

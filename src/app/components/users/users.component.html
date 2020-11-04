@@ -1,0 +1,65 @@
+<table *ngIf="!showNewUser">
+    <tr>
+      <th>עדכן סיסמא</th>
+      <th>שם משתמש</th>
+      <th>תעודת זהות</th>
+    </tr>
+    <tr *ngFor="let item of users; let index = index">
+      <td (click)="updatePssword(index)" style="cursor: pointer;">עדכן סיסמא</td>
+      <td>{{item.userName}}</td>
+      <td>{{item.id}}</td>
+    </tr>
+</table>
+
+<form [formGroup]="updatePasswordForm" (ngSubmit)="onSubmit()" *ngIf="showUpdatePassword">
+
+    <div class="form-group row col-md-4" style="float: right;">
+        <input type="password" id="id" name="id" formControlName="password" autocomplete="off"
+         class="form-control" placeholder="סיסמא חדשה">
+    </div>
+
+    <br /><br /><br />
+    <div class="form-group login row">
+        <button class="btn btn-info">עדכן סיסמא</button>
+    </div>
+</form>
+
+
+<button class='btn btn-info' (click)="addNewUser()" *ngIf="!showNewUser">יצירת משתמש חדש</button>
+<br/>
+
+<form [formGroup]="NewUserForm" (ngSubmit)="createNewUser()" *ngIf="showNewUser" class="container">
+
+    <div class="form-group row col-md-4">
+        <input type="text" id="id" name="id" formControlName="id" autocomplete="off"
+         class="form-control" placeholder="תעודת זהות">
+    </div>
+
+    <div class="form-group row col-md-4">
+        <input type="password" id="password" name="password" formControlName="password" autocomplete="off"
+         class="form-control" placeholder="סיסמא">
+    </div>
+
+    <div class="form-group row col-md-4">
+        <input type="text" id="userName" name="userName" formControlName="userName" autocomplete="off"
+         class="form-control" placeholder="שם משתמש">
+    </div>
+
+    <div class="form-group row col-md-4">
+        <select name="role" id="role" class="form-control" formControlName="role">
+            <option value="" disabled selected>בחר תפקיד</option>
+            <option>admin</option>
+            <option>update</option>
+            <option>phone</option>
+        </select>
+    </div>
+
+    <br />
+    <div class="form-group login">
+        <button class="btn btn-info">אישור</button>
+    </div>
+</form>
+
+
+
+

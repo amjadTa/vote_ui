@@ -1,0 +1,23 @@
+<nav class='navbar navbar-expand navbar-dark bg-dark mb-3 navbar-right'>
+  <a class='navbar-brand' href='#' [routerLink]="['/home']">יום הצבעה</a>
+  <div class='collapse navbar-collapse'>
+    <ul class='navbar-nav align-items-start pr-0 ml-30'>
+
+      <li class='nav-item active' *ngIf = "role == 'admin'">
+        <a class='btn btn-dark text-light' [routerLink]="['/users']">משתמשים</a>
+      </li>
+
+      <li class='nav-item active'  *ngIf = "role == 'admin' || role == 'phone'">
+        <a class='btn btn-dark text-light' [routerLink]="['/phone']">יצירת קשר</a>
+      </li>
+
+      <li class='nav-item active'  *ngIf = "role == 'admin' || role == 'update'">
+        <a class='btn btn-dark text-light' [routerLink]="['/update']">דיווח הצבעה</a>
+      </li>
+
+      <li class='nav-item active'>
+        <a class='btn btn-dark text-light' (click)="logOut()" [routerLink]="['/']">יציאה</a>
+      </li>
+    </ul>
+  </div>
+</nav>

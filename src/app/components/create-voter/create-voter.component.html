@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="title row">
+        <h2 class="font-italic text-muted text-center">הוספת מצביע חדש</h2>
+    </div>
+    <form [formGroup]="newVoterForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <input type="text" id="id" name="id" formControlName="id" autocomplete="off" class="form-control" placeholder="תעודת זהות">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="first_name" name="first_name" formControlName="first_name" autocomplete="off" class="form-control" placeholder="שם פרטי">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="last_name" name="last_name" formControlName="last_name" autocomplete="off" class="form-control" placeholder="שם משפחה">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="ballotBoxNumber" name="ballotBoxNumber" formControlName="ballotBoxNumber" autocomplete="off"
+                class="form-control" placeholder="מספר קלפי">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="serieal" name="serieal" formControlName="serieal" autocomplete="off"
+                class="form-control" placeholder="מספר סידורי בקלפי">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="phone" name="phone" formControlName="phone" autocomplete="off"
+                class="form-control" placeholder="מספר טלפון של המצביע">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="support" name="support" formControlName="support" autocomplete="off"
+                class="form-control" placeholder="הצבעה / העדפה">
+        </div>
+        <br />
+        <div class="form-group search">
+            <button class="btn btn-info">הוסף</button>
+        </div>
+    </form>
+</div>

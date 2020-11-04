@@ -1,0 +1,16 @@
+<table>
+    <tr>
+     <th>נוצר קשר</th>
+      <th>קבצה</th>
+      <th>טלפון</th>
+      <th>שם משפחה</th>
+      <th>שם פרטי</th>
+    </tr>
+    <tr *ngFor="let item of data; let index=index">
+      <td style="cursor: pointer;" (click)="getPhone(index)"><button class="btn btn-info">עדכן יצירת קשר</button> </td>
+      <td>{{item.light}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.last_name}}</td>
+      <td>{{item.first_name}}</td>
+    </tr>
+</table>

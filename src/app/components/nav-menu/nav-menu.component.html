@@ -3,15 +3,15 @@
   <div class='collapse navbar-collapse'>
     <ul class='navbar-nav align-items-start pr-0 ml-30'>
 
-      <li class='nav-item active' *ngIf = "role == 'admin'">
+      <li class='nav-item active'>
         <a class='btn btn-dark text-light' [routerLink]="['/users']">משתמשים</a>
       </li>
 
-      <li class='nav-item active'  *ngIf = "role == 'admin' || role == 'phone'">
+      <li class='nav-item active'>
         <a class='btn btn-dark text-light' [routerLink]="['/phone']">יצירת קשר</a>
       </li>
 
-      <li class='nav-item active'  *ngIf = "role == 'admin' || role == 'update'">
+      <li class='nav-item active'>
         <a class='btn btn-dark text-light' [routerLink]="['/update']">דיווח הצבעה</a>
       </li>
 

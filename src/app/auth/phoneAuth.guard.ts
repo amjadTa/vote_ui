@@ -17,7 +17,7 @@ export class PhoneAuthGuard implements CanActivate {
     if(role == 'admin' || role == 'phone'){
       return true;
     }  
-    this.route.navigate(['/']);
+    alert('אין לך הרשאה לדף זה');
     return false;
 
   } // end canActivate()  

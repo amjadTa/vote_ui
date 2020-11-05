@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
     if(role == 'admin' || role == 'update'){
       return true;
     }  
-    this.route.navigate(['/']);
+    alert('אין לך הרשאה לדף זה');
     return false;
 
   } // end canActivate()  

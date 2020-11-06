@@ -10,7 +10,7 @@ import { PhoneService } from 'src/app/services/phone.service';
 export class PhoneComponent implements OnInit {
 
   phoneForm: FormGroup;
-  boxes: any;// = [10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160];
+  boxes: any;
   circles: any;
   showResult: boolean = false;
   data: any;
@@ -39,8 +39,10 @@ export class PhoneComponent implements OnInit {
 
   onSubmit() {
     const light = this.phoneForm.value.traficLight;
-    const box = this.phoneForm.value.box;
-    const circle = this.phoneForm.value.circle;
+    let box = this.phoneForm.value.box;
+    let circle = this.phoneForm.value.circle;
+    if(box == 'כל הקלפיות') { box = ''; }
+    if(circle == 'ללא סינון מעגלים') { circle = 'No'; }
     this.phoneService.list(box, circle, light)
     .subscribe(data => {
       if(data.length > 0) {

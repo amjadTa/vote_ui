@@ -27,7 +27,7 @@ export class ResultComponent implements OnInit {
         alert('עודכן שהצביע');
       },
         error => {
-          alert('קיימת שגיאה, נסה שוב מאוחר יותר!');
+          alert('הנמען עודכן שהצביע מקודם');
         });
   }
   

@@ -22,6 +22,7 @@
                 (change)="onChangeBox($event.target.value)">
                     <option value="" disabled selected>בחר קלפי</option>
                     <option #clear [hidden]="clear.selected" style="font-weight: bold;">נקה בחירה</option>
+                    <option>כל הקלפיות</option>
                     <option *ngFor="let box of boxes">{{box.box}}</option>
                 </select>
             </div>
@@ -31,6 +32,7 @@
                 (change)="onChangeCircle($event.target.value)">
                     <option value="" disabled selected>בחר שם מעגל</option>
                     <option #clear [hidden]="clear.selected" style="font-weight: bold;">נקה בחירה</option>
+                    <option>ללא סינון מעגלים</option>
                     <option *ngFor="let circle of circles">{{circle}}</option>
                 </select>
             </div>

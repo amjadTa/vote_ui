@@ -50,6 +50,10 @@ export class PhoneComponent implements OnInit {
         this.showResult = true;
         this.clearSearch();
       }
+      else {
+        this.showResult = false;
+        alert('אין תוצאות');
+      }
     });
 
   } // end onSubmit()

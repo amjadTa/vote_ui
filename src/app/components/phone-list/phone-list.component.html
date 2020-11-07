@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
     <tr>
      <th>נוצר קשר</th>
       <th>קבצה</th>
@@ -13,4 +13,5 @@
       <td>{{item.last_name}}</td>
       <td>{{item.first_name}}</td>
     </tr>
-</table>
+</table> -->
+<ng2-smart-table [settings]="settings" [source]="source" (edit)="onEdit($event)"></ng2-smart-table>

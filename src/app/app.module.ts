@@ -18,6 +18,8 @@ import { UsersComponent } from './components/users/users.component';
 import { CreateVoterComponent } from './components/create-voter/create-voter.component';
 import { PhoneListComponent } from './components/phone-list/phone-list.component';
 
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,8 @@ import { PhoneListComponent } from './components/phone-list/phone-list.component
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    Ng2SmartTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

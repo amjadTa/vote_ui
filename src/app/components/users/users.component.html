@@ -1,11 +1,13 @@
 <table *ngIf="!showNewUser">
     <tr>
       <th>עדכן סיסמא</th>
+      <th>סוג משתמש</th>
       <th>שם משתמש</th>
       <th>תעודת זהות</th>
     </tr>
     <tr *ngFor="let item of users; let index = index">
       <td (click)="updatePssword(index)" style="cursor: pointer;">עדכן סיסמא</td>
+      <td>{{item.role}}</td>
       <td>{{item.userName}}</td>
       <td>{{item.id}}</td>
     </tr>

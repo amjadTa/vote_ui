@@ -1,23 +1,36 @@
-table {
-    background-color: #fff;
-    font-family: 'Open Sans Regular';
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    margin-bottom: 30px;
-    th {
-        background: #0087C7;
-        color: white !important;
-        text-align: right;
-    }
+// table {
+//     background-color: #fff;
+//     font-family: 'Open Sans Regular';
+//     border-collapse: collapse;
+//     border-spacing: 0;
+//     width: 100%;
+//     margin-bottom: 30px;
+//     th {
+//         background: #0087C7;
+//         color: white !important;
+//         text-align: right;
+//     }
 
-    th,
-    td {
-        font-size: 16px;
-        color: #464646;
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-        text-align: right;
+//     th,
+//     td {
+//         font-size: 16px;
+//         color: #464646;
+//         border: 1px solid #dddddd;
+//         text-align: left;
+//         padding: 8px;
+//         text-align: right;
+//     }
+// }
+
+:host{
+    ::ng-deep {
+  
+      table{
+        tr {
+          td,th{
+            border: 1px solid;
+          }
+        }
+      }
     }
-}
+  }  

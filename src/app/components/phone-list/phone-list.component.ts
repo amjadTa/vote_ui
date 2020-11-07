@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { PhoneService } from 'src/app/services/phone.service';
 
@@ -7,7 +7,7 @@ import { PhoneService } from 'src/app/services/phone.service';
   templateUrl: './phone-list.component.html',
   styleUrls: ['./phone-list.component.scss']
 })
-export class PhoneListComponent implements OnInit {
+export class PhoneListComponent implements OnInit, OnChanges {
 
   @Input()
   data: any;
@@ -42,6 +42,10 @@ source: LocalDataSource;
   constructor(private phoneService: PhoneService) { }
 
   ngOnInit(): void {
+    this.source = new LocalDataSource(this.data);
+  }
+
+  ngOnChanges(): void {
     this.source = new LocalDataSource(this.data);
   }
 

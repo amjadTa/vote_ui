@@ -19,6 +19,8 @@ export class NavMenuComponent implements OnInit, OnChanges  {
   }
   
   logOut() {
+    localStorage.removeItem('role');
+    localStorage.removeItem('userName');
     localStorage.clear();
   }
 }

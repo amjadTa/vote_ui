@@ -2,10 +2,11 @@
     <div class="title row">
         <h2 class="font-italic text-muted text-center">חיפוש קבוצת מצביעים</h2>
     </div>
+    <br/><br/>
     <div class="row" style="float: right;">
         <form [formGroup]="phoneForm" (ngSubmit)="onSubmit()">
 
-            <div class="form-group row col-md-4">
+            <div class="form-group row col-md-12">
                 <select name="traficLight" id="traficLight" class="form-control" formControlName="traficLight"
                     (change)="onChangeLight($event.target.value)">
                     <option value="" disabled selected>בחר צבע רמזור</option>
@@ -17,7 +18,7 @@
                 </select>
             </div>
     
-            <div class="form-group row col-md-4">
+            <div class="form-group row col-md-12">
                 <select name="box" id="box" class="form-control" formControlName="box"
                 (change)="onChangeBox($event.target.value)">
                     <option value="" disabled selected>בחר קלפי</option>
@@ -27,7 +28,7 @@
                 </select>
             </div>
     
-            <div class="form-group row col-md-4">
+            <div class="form-group row col-md-12">
                 <select name="circle" id="circle" class="form-control" formControlName="circle"
                 (change)="onChangeCircle($event.target.value)">
                     <option value="" disabled selected>בחר שם מעגל</option>
@@ -38,10 +39,10 @@
             </div>
 
             <div class="row">
-                <div class="form-group search row col-md-4">
+                <div class="form-group search row col-md-12">
                     <button class="btn btn-info">חיפוש</button>
                 </div>
-                <div class="col-md-4" style="float: left; cursor: pointer;" (click)="clearSearch()">
+                <div class="col-md-12" style="float: left; cursor: pointer;" (click)="clearSearch()">
                     <span>נקה שדות חיפוש</span>
                 </div>
             </div>

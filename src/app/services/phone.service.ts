@@ -34,4 +34,14 @@ export class PhoneService {
     const item = {id: id};
     return this.api.post(this.apiController + '/get_phone', item);
   }
+
+  getVotersReport(): Observable<any> {
+    const item = {};
+    return this.api.get(this.apiController + '/voters_report', item);
+  }
+
+  getCirclesReport(): Observable<any> {
+    const item = {};
+    return this.api.get(this.apiController + '/circles_report', item);
+  }
 }

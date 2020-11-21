@@ -7,12 +7,16 @@ import { PhoneComponent } from './components/phone/phone.component';
 import { UsersComponent } from './components/users/users.component';
 import { AdminAuthGuard } from './auth/adminAuth.guard';
 import { PhoneAuthGuard } from './auth/phoneAuth.guard';
+import { VotersReportComponent } from './components/voters-report/voters-report.component';
+import { CircleReportComponent } from './components/circle-report/circle-report.component';
 
 
 const routes: Routes = [
   {path: 'users', component:UsersComponent, canActivate: [AdminAuthGuard]},
   {path: 'phone', component:PhoneComponent, canActivate: [PhoneAuthGuard]},
   {path: 'update', component:VotingReportComponent, canActivate: [AuthGuard]},
+  {path: 'votersReport', component:VotersReportComponent, canActivate: [AuthGuard]},
+  {path: 'circleReport', component:CircleReportComponent, canActivate: [AuthGuard]},
   {path: '', component:LoginComponent},
 ];
 

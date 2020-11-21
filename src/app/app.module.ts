@@ -19,6 +19,8 @@ import { CreateVoterComponent } from './components/create-voter/create-voter.com
 import { PhoneListComponent } from './components/phone-list/phone-list.component';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { VotersReportComponent } from './components/voters-report/voters-report.component';
+import { CircleReportComponent } from './components/circle-report/circle-report.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     UsersComponent,
     CreateVoterComponent,
     PhoneListComponent,
+    VotersReportComponent,
+    CircleReportComponent,
   ],
   imports: [
     BrowserModule,

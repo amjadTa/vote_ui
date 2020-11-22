@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: 'users', component:UsersComponent, canActivate: [AdminAuthGuard]},
   {path: 'phone', component:PhoneComponent, canActivate: [PhoneAuthGuard]},
   {path: 'update', component:VotingReportComponent, canActivate: [AuthGuard]},
-  {path: 'votersReport', component:VotersReportComponent, canActivate: [AuthGuard]},
-  {path: 'circleReport', component:CircleReportComponent, canActivate: [AuthGuard]},
+  {path: 'votersReport', component:VotersReportComponent, canActivate: [AdminAuthGuard]},
+  {path: 'circleReport', component:CircleReportComponent, canActivate: [AdminAuthGuard]},
   {path: '', component:LoginComponent},
 ];
 

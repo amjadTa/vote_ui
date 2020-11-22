@@ -14,7 +14,7 @@ export class PhoneAuthGuard implements CanActivate {
    */
   canActivate(): boolean | Observable<boolean> {
     const role = localStorage.getItem('role');
-    if(role == 'admin' || role == 'phone'){
+    if(role == 'admin' || role == 'phone' || role == 'manager'){
       return true;
     }  
     alert('אין לך הרשאה לדף זה');

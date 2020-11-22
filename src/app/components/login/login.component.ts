@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
       if (role == 'update') {
         this.router.navigate(['/update']);
       }
-      else if (role == 'admin' || role == 'phone') {
+      else if (role == 'admin' || role == 'phone' || role == 'manager') {
         this.router.navigate(['/phone']);
       }
       else {

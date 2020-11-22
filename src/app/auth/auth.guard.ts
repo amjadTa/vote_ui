@@ -14,7 +14,7 @@ export class AuthGuard implements CanActivate {
    */
   canActivate(): boolean | Observable<boolean> {
     const role = localStorage.getItem('role');
-    if(role == 'admin' || role == 'update'){
+    if(role == 'admin' || role == 'update' || role == 'manager'){
       return true;
     }  
     alert('אין לך הרשאה לדף זה');

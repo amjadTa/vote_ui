@@ -10,6 +10,7 @@ export class PhoneService {
 
   private readonly apiController: string = 'update';
   private user_name: string = localStorage.getItem('userName');
+  private role: string = localStorage.getItem('role');
 
   constructor(private api: HttpService) { }
 
@@ -26,6 +27,7 @@ export class PhoneService {
     .set('number', `${number}`)
     .set('circle', `${circle}`)
     .set('user_name', `${this.user_name}`)
+    .set('role', `${this.role}`)
     .set('light', `${light}`); 
     return this.api.get(this.apiController + '/voters_list', {params});
   }

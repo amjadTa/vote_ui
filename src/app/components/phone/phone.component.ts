@@ -47,6 +47,9 @@ export class PhoneComponent implements OnInit {
     .subscribe(data => {
       if(data.length > 0) {
         this.data = data;
+        for(let i = 0; i < this.data.length; i++) {
+          this.data[i].phone = `<a href='tel:${this.data[i].phone}'>${this.data[i].phone}</a>`;
+        }
         this.showResult = true;
         this.clearSearch();
       }

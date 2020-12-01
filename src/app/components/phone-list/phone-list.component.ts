@@ -22,11 +22,18 @@ settings = {
     editButtonContent: '<span>לחץ אישור יצירת קשר</span>',
   },
   columns: {
+    calphi_number: {
+      title: 'מספר קלפי',
+    },
+    circle: {
+      title: 'מעגל',
+    },
     light: {
       title: 'רמזור',
     },
     phone: {
       title: 'מספר טלפון',
+      type: 'html'
     },
     last_name: {
       title: 'שם משפחה',

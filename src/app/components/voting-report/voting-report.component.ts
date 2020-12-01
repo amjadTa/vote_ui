@@ -24,6 +24,7 @@ export class VotingReportComponent implements OnInit {
     id: ''
   };
 
+
   constructor(private formBuilder: FormBuilder, private updateService: UpdateVoterService) { }
 
   ngOnInit(): void {
@@ -32,6 +33,10 @@ export class VotingReportComponent implements OnInit {
       ballotBoxNumber: [''],
       serieal: ['']
     });
+    const calphiNumberForSearch = localStorage.getItem('calphi_number_search');
+    if(calphiNumberForSearch) {
+      this.votingReportForm.get('ballotBoxNumber').setValue(calphiNumberForSearch);
+    }
   }
 
   onSubmit() {
@@ -66,6 +71,7 @@ export class VotingReportComponent implements OnInit {
     }
 
     else if (this.votingReportForm.value.ballotBoxNumber && this.votingReportForm.value.serieal) {
+      localStorage.setItem('calphi_number_search', this.votingReportForm.value.ballotBoxNumber);
       this.updateService.searchByBox(this.votingReportForm.value.ballotBoxNumber, this.votingReportForm.value.serieal).subscribe(result => {
         this.votingReportForm.get('id').setValue(result.id);
         this.voterData = {
@@ -106,7 +112,7 @@ export class VotingReportComponent implements OnInit {
   clearSearch() {
     this.votingReportForm.setValue({
       id: '',
-      ballotBoxNumber: '',
+      ballotBoxNumber: localStorage.getItem('calphi_number_search'),
       serieal: ''
     });
   }
